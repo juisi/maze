@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.js"></script>
+    <style>
+      body {
+        margin: 0;
+      }
+      .hidden {
+        display: none !important;
+      }
+      h1,
+      p {
+        color: white;
+      }
+      h1 {
+        font-size: 56px;
+      }
+      .gameOptions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        position: absolute;
+        z-index: 1;
+        top: 40%;
+        left: 42%;
+        width: 100vw;
+      }
+      .break {
+        display: block;
+        flex-basis: 100%;
+      }
+      label {
+        color: white;
+        display: inline-block;
+        width: 140px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gameOptions">
+      <div class="row">
+        <input
+          title="restart"
+          value="Generate new maze!"
+          type="button"
+          id="restartMaze"
+        />
+        <input type="button" id="closeGameOptions" value="Close" />
+      </div>
+      <div class="break"></div>
+      <div class="row">
+        <label>Vertical rows</label>
+        <input size="4" id="verticalRows" value="" />
+      </div>
+      <div class="break"></div>
+      <div class="row">
+        <label>Horizontal columns</label>
+        <input size="4" id="horizontalCols" value="" />
+      </div>
+      <div class="break"></div>
+      <div class="row">
+        <p>
+          Use A,W,D,S to move the ball to the cube.<br />
+          If the ball does not move, mouse click the maze once to focus.
+        </p>
+
+        <h1 class="winner hidden">Win!</h1>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
